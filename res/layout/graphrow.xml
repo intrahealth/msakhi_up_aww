@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res/org.intrahealth.mnewborncare.awc"
+    android:layout_width="fill_parent"
+    android:layout_height="170dp"
+
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    
+    >
+ 
+
+    <TextView
+        android:id="@+id/edd_entry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name_entry"
+        android:layout_alignRight="@+id/name_entry"
+        android:layout_below="@id/name_entry"
+        android:layout_marginTop="4dip"
+        android:text="..."
+        android:textColor="#343434"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/dob_entry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edd_entry"
+        android:layout_below="@+id/mobile_no"
+        android:scrollHorizontally="false"
+        android:text="..."
+        android:textColor="#343434"
+        android:visibility="gone"
+        android:textColorLink="@color/backColor1"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/slno"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_alignTop="@+id/list_image"
+        android:layout_toRightOf="@+id/list_image"
+        android:background="@drawable/nobg"
+ 
+        android:gravity="center"
+        android:text="12"
+        
+        android:layout_marginTop="10dp"
+        android:textColor="@color/clrWhite"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/name_entry"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/slno"
+        android:layout_marginLeft="16dp"
+        android:layout_toLeftOf="@+id/spin_filter0"
+        android:layout_toRightOf="@+id/slno"
+        android:text="Rihanna Love"
+        android:textColor="#040404"
+        android:textSize="12dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/mobile_no"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edd_entry"
+        android:layout_alignRight="@+id/edd_entry"
+        android:layout_below="@+id/edd_entry"
+        android:scrollHorizontally="false"
+        android:text="..."
+        android:textColor="#343434"
+        android:textColorLink="@color/backColor1"
+        android:textSize="12sp" />
+
+<!--     <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@+id/checkBox2"
+        
+    />
+        <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="05dp"
+        android:layout_alignParentRight="true"
+      /> -->
+        <!--      android:layout_alignBaseline="@+id/checkBox1"
+        android:layout_alignBottom="@+id/name_entry"
+       
+        android:layout_toRightOf="@+id/checkBox1" -->
+
+ <!--    <TextView 
+                android:id="@+id/tv_unit"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_height="wrap_content"
+                
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="kg"/>
+
+                android:layout_toRightOf="@id/checkBox2"
+
+            <Spinner
+                android:id="@+id/spin_filter3"
+                style="@style/SpinnerAsEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                    android:gravity="top|center_horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/mobile_no"
+                />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="77dp"
+                android:layout_height="34dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/tv_unit"
+                 android:layout_marginTop="90dp"
+                android:ems="10"
+                android:numeric="decimal"
+                android:text="0"
+                android:gravity="center"
+                android:focusable="false"
+                
+                android:textSize="15dp" >
+
+                <requestFocus />
+            </EditText>
+
+            <Spinner
+                android:id="@+id/spin_filter0"
+                style="@style/SpinnerAsEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top|center_horizontal"
+                android:layout_alignBottom="@+id/edd_entry"
+                android:layout_alignParentRight="true" /> -->
+
+            <com.pkmmte.circularimageview.CircularImageView
+                android:id="@+id/list_image"
+                android:layout_width="55dip"
+                android:layout_height="55dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/no_image"
+                app:border="true"
+                app:border_color="#ffffff"
+                app:border_width="2dp"
+                app:selector="true"
+                app:selector_color="#4403a9f4"
+                app:selector_stroke_color="#aa5677fc"
+                app:selector_stroke_width="2dp"
+                app:shadow="true" />
+
+</RelativeLayout>

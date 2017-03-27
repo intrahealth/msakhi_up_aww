@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/buttons"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="#B85C8A"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:shadowColor="#171717"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="भोजन"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relay_container"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:layout_marginTop="2dp"
+            android:background="#B85C8A" >
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:paddingLeft="80dp"
+                android:paddingTop="20dp"
+                android:text="माह"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/spin_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="0.17"
+            android:background="@color/clrOffwhite"
+            android:choiceMode="singleChoice"
+            android:divider="#b5b5b5"
+            android:dividerHeight="1dp"
+            android:fillViewport="true"
+            android:listSelector="@drawable/list_selector" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/txtCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="." />
+    </LinearLayout>
+
+</RelativeLayout>

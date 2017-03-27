@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.intrahealth.mnewborncare.awc"
+    android:versionCode="38"
+    android:versionName="2.3.2beta" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name="org.intrahealth.mnewborncare.awc.Global"
+        android:icon="@drawable/msakhi_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Workflow"
+            android:label="Main workflow"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Test"
+            android:label="Main workflow"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".EditPreference"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Preg_reg_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".preg_entry"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".Birth_reg_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Birth_reg_entry"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".Home_visits_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Quest"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Remedy"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Visit_summary"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service android:name=".SmsService" />
+
+        <activity
+            android:name=".DReport_entry"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MultiLineChartActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Immun_entry"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Report_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Report"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Reporthv"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".BirthregOpt"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".LineChartActivity2"
+            android:screenOrientation="landscape" >
+        </activity>
+       // Send Receiver
+        <receiver android:name=".SendBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="SMS_SENT" />
+            </intent-filter>
+        </receiver>
+        //Delivery Receiver
+        <receiver android:name=".DeliveryBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="SMS_DELIVERED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Counc_sel"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Counc_modlist"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Counc_msglist"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Counc_info"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Aboutus"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".AVisit_summary"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".QuestANC"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Anc_visit_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.intrahealth.mnewborncare.awc.FoodPagerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.intrahealth.mnewborncare.awc.GraphViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.intrahealth.mnewborncare.awc.FoodActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.intrahealth.mnewborncare.awc.graphDataActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.intrahealth.mnewborncare.awc.HomeVisitChildAnc"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.intrahealth.mnewborncare.awc.MessageShowAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.intrahealth.mnewborncare.awc.GuestDonationWebView"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PregSearch"
+            android:label="@string/title_activity_preg_search"
+            android:parentActivityName="android.app.ListActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.app.ListActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <!-- Jitendra -->
+        <activity
+            android:name="org.intrahealth.mnewborncare.awc.Report_AncVisit"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.intrahealth.mnewborncare.awc.Report_Anc_VisitList"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="org.intrahealth.mnewborncare.awc.Linegraaph1"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service android:name=".SyncLocalDatatoServer" />
+        <service android:name=".SendDataService" />
+
+        <receiver android:name=".SendDataReciever" >
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/bg_footer"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/btnNewBirth"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_color"
+            android:drawableLeft="@drawable/plus_symbol"
+            android:drawablePadding="05dp"
+            android:text="सेव"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_color"
+            android:drawableLeft="@drawable/plus_symbol"
+            android:drawablePadding="05dp"
+            android:enabled="false"
+            android:text="सुरक्षित करे"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/buttons"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="#B85C8A"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:shadowColor="#171717"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="भोजन"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relay_container"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:layout_marginTop="2dp"
+            android:background="#B85C8A" >
+
+            <TextView
+                android:id="@+id/month"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:paddingLeft="25dp"
+                android:paddingTop="15dp"
+                android:text="माह"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/spin_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_con"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:layout_marginTop="2dp"
+            android:background="#B85C8A"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="28dp"
+                android:shadowColor="#171717"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="भार"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="32dp"
+                android:layout_toLeftOf="@id/weight"
+                android:shadowColor="#171717"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="भोजन"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_cate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@+id/food"
+                android:layout_marginLeft="35dp"
+                android:gravity="center"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="0.17"
+            android:background="@color/clrOffwhite"
+            android:choiceMode="singleChoice"
+            android:divider="#b5b5b5"
+            android:dividerHeight="1dp"
+            android:fillViewport="true"
+            android:listSelector="@drawable/list_selector" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/txtCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="." />
+    </LinearLayout>
+
+</RelativeLayout>

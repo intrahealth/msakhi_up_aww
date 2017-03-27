@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+function CallActivity()
+{
+
+JSInterface.ClickActivity();
+}
+	function newfun(hieght,width,sd11,sd22,sd33,arr){
+
+	 	var cans=[];
+		var operating_profit=[];
+		var mov_profit=[];
+		var newyear =[];
+		var weight=[];
+		
+		
+		
+	    var sd1 = sd11.split(",");
+	    var sd2 = sd22.split(",");
+	    var sd3 = sd33.split(",");
+	    var arr1=arr.split(",");
+	  
+       	for(var i=0;i<37;i++){
+	 	var year=i;
+	 	
+	    var newcansarray=sd1[i];
+	    var newoperatingarray=sd2[i];
+	    var newmovingarray=sd3[i];
+	    var newyearthis=""+(i);
+	    
+	   
+	    newyear.push({label:newyearthis});
+	 	
+	 	cans.push({value:newcansarray});
+	    operating_profit.push({value:newoperatingarray});
+		mov_profit.push({value:newmovingarray});
+		if(i<arr.length){
+	    var newweightarr=arr1[i];
+	    weight.push({label:year,value:newweightarr});
+	    }
+		
+}
+
+var data={
+                 "chart": {
+                               
+                "xAxisname": "वजन का महीना  →",
+                "yAxisName": "वजन (किलोग्राम) →",
+                "xAxisMinValue": "0",
+                "xAxisMaxValue": "36",
+                "yAxisMinValue": "0",
+                "yAxisMaxValue": "18",
+                "drawQuadrant" : "1",
+                "paletteColors": "#FF5733,#F4D03F,#7FFF00",
+                "bgColor": "#87CEEB",
+                "showcolumnshadow": "0",
+                "borderAlpha": "20",
+                "showCanvasBorder": "0",
+                "usePlotGradientColor": "0",
+                "plotBorderAlpha": "10",
+                "plotFillAlpha": "50",
+                "legendBorderAlpha": "0",
+                "legendShadow": "0",
+                "showValues": "0",
+                "showBorder": "0",
+                "showXAxisLine": "1",
+                 "showYAxisLine": "1",
+                "xAxisLineColor": "#999999",
+                "divlineColor": "#999999",               
+                "divLineIsDashed": "1",
+                "showAlternateHGridColor": "0",
+                
+            },
+            "categories": [
+                {    "x":newyear,
+                     "showverticalline": "0",
+                    "category": newyear
+                }
+            ],
+            "dataset": [
+                
+                {
+                    "seriesname": "गंबीर कम वजन",
+                    "renderAs": "area",
+                    
+                    "data": cans
+                },
+                {
+                    "seriesname": "मध्यम कम वजन",
+                     "renderAs": "area",
+                     
+                    "data": operating_profit
+                },
+                {
+                    "seriesname": "सामान्य",
+                     "renderAs": "area",
+                    
+                    "data": mov_profit
+                }
+                ,
+                {
+                    "seriesname": "",
+                     "renderAs": "line",
+                     "color":"#6A5ACD",
+                     "showValues": "1",
+                     "type": "text",
+                     "fontsize": "8",                     
+                    "data": weight
+                }
+    ]
+}
+
+FusionCharts.ready(function(){
+
+var revenueChart = new FusionCharts({
+type: "stackedcolumn2dline",
+renderAt: "chartContainer",
+width:width ,
+height: hieght,
+dataFormat: "json",
+dataSource: data
+    });
+    revenueChart.render("chartContainer");
+    });
+    }
+     window.onload = CallActivity();
+   </script>
+<script src="jquery.min.js"></script>
+  <script type="text/javascript" src="fusioncharts.js"></script>
+<script type="text/javascript" src="fusioncharts.theme.fint.js?cacheBust=56"></script></head>
+  <body >
+    <div id="chartContainer" style="height: 500px; width: 100%;">
+    </div>
+  </body>
+  </html>

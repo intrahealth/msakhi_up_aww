@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:background="#B85C8A" >
+
+            <TextView
+                android:id="@+id/tvHead"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="गृह भ्रमण "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100" >
+
+            <TextView
+                android:id="@+id/tvHeadC1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:shadowColor="@color/backColor1"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="क्र.सं."
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/tvHeadC2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:paddingLeft="10dp"
+                android:shadowColor="@color/backColor1"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="गर्भवती "
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/tvHeadC3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:shadowColor="@color/backColor1"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="..."
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="0.17"
+            android:background="@color/clrOffwhite"
+            android:choiceMode="singleChoice"
+            android:divider="#b5b5b5"
+            android:dividerHeight="1dp"
+            android:fillViewport="true"
+            android:listSelector="@drawable/list_selector" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

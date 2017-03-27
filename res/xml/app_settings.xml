@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <EditTextPreference
+        android:defaultValue="0000"
+        android:key="user_password"
+        android:summary="Password for User"
+        android:title="User Password" />
+    <EditTextPreference
+        android:defaultValue="123456"
+        android:key="adm_password"
+        android:summary="Password for admin"
+        android:title="Admin Password" />
+    <EditTextPreference
+        android:defaultValue="1"
+        android:key="id"
+        android:title="AWC ID" />
+    <EditTextPreference
+        android:defaultValue="localhost"
+        android:key="server_url"
+        android:title="URL for Application server" />
+    <EditTextPreference
+        android:defaultValue="---"
+        android:key="user_name"
+        android:title="Name of ASHA/ANM" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="send_sms"
+        android:title="SMS sync" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="gprs_sync"
+        android:title="GPRS sync" />
+
+</PreferenceScreen>
